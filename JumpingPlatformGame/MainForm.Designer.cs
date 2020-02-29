@@ -109,16 +109,16 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(1156, 50);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(330, 516);
+            this.listBox1.Size = new System.Drawing.Size(330, 564);
             this.listBox1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1156, 573);
+            this.button1.Location = new System.Drawing.Point(1156, 627);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(330, 69);
+            this.button1.Size = new System.Drawing.Size(330, 61);
             this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Text = "Add customer";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
