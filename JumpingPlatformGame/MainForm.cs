@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NezarkaBookstoreWeb;
 
 namespace JumpingPlatformGame
 {
@@ -97,7 +99,17 @@ namespace JumpingPlatformGame
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //StreamReader reader = new StreamReader("NezarkaSummer.in");
+            //ModelStore store = new NezarkaBookstoreWeb.ModelStore();
+            listBox1.Items.Add(new CustomerEntity("Pavel Jezek"));
+            listBox1.Items.Add(new CustomerEntity("Filip Kliber", Color.Black));
+            listBox1.Items.Add(new CustomerEntity("Jan Pacovsky", Color.Red));
+            listBox1.Items.Add(new CustomerEntity("Radek Zikmund", Color.DarkRed));
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegisterEntity((MovableEntity)listBox1.SelectedItem);
         }
     }
 

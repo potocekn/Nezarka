@@ -6,7 +6,7 @@ using System.IO;
 
 namespace NezarkaBookstoreWeb {
 
-	class ModelStore {
+	 class ModelStore {
 		private List<Book> books = new List<Book>();
 		private List<Customer> customers = new List<Customer>();
 
