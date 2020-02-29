@@ -97,14 +97,39 @@ namespace JumpingPlatformGame
 
         private void jillButton_Click(object sender, EventArgs e) => RegisterEntity(new Jill());
 
+        private Color GetCustomersColor(DateTime? dateOfJoining)
+        {
+            if (dateOfJoining == null)
+            {
+                return Color.Gold;
+            }
+            else
+            {                
+                TimeSpan interval = DateTime.Now.Subtract((DateTime)dateOfJoining) ;
+                int years = (int)interval.Days / 365;
+
+                switch (years)
+                {
+                    case 0: return Color.Black;
+                    case 1: return Color.DarkRed;
+                    case 2: return Color.Red;
+                    case 3: return Color.IndianRed;
+                    default: return Color.OrangeRed;
+                }
+            }
+            
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             //StreamReader reader = new StreamReader("NezarkaSummer.in");
             //ModelStore store = new NezarkaBookstoreWeb.ModelStore();
-            listBox1.Items.Add(new CustomerEntity("Pavel Jezek"));
-            listBox1.Items.Add(new CustomerEntity("Filip Kliber", Color.Black));
-            listBox1.Items.Add(new CustomerEntity("Jan Pacovsky", Color.Red));
-            listBox1.Items.Add(new CustomerEntity("Radek Zikmund", Color.DarkRed));
+            listBox1.Items.Add(new CustomerEntity("Pavel Jezek", GetCustomersColor(null)));
+            listBox1.Items.Add(new CustomerEntity("Filip Kliber", GetCustomersColor(new DateTime(2020, 1, 18, 13, 30, 30))));
+            listBox1.Items.Add(new CustomerEntity("Jan Pacovsky", GetCustomersColor(new DateTime(2019, 1, 18, 13, 30, 30))));
+            listBox1.Items.Add(new CustomerEntity("Radek Zikmund", GetCustomersColor(new DateTime(2018, 1, 18, 13, 30, 30))));
+            listBox1.Items.Add(new CustomerEntity("Janko Mrkvicka", GetCustomersColor(new DateTime(2017, 1, 18, 13, 30, 30))));
+            listBox1.Items.Add(new CustomerEntity("Janko Hrasko", GetCustomersColor(new DateTime(2016, 1, 18, 13, 30, 30))));
         }
 
         private void button1_Click(object sender, EventArgs e)
