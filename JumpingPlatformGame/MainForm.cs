@@ -123,13 +123,12 @@ namespace JumpingPlatformGame
         private void MainForm_Load(object sender, EventArgs e)
         {
             StreamReader reader = new StreamReader("NezarkaSummer.in");
-            //var store = new NezarkaBookstoreWeb.ModelStore.LoadFrom(reader);
-            listBox1.Items.Add(new CustomerEntity("Pavel Jezek", GetCustomersColor(null)));
-            listBox1.Items.Add(new CustomerEntity("Filip Kliber", GetCustomersColor(new DateTime(2020, 1, 18, 13, 30, 30))));
-            listBox1.Items.Add(new CustomerEntity("Jan Pacovsky", GetCustomersColor(new DateTime(2019, 1, 18, 13, 30, 30))));
-            listBox1.Items.Add(new CustomerEntity("Radek Zikmund", GetCustomersColor(new DateTime(2018, 1, 18, 13, 30, 30))));
-            listBox1.Items.Add(new CustomerEntity("Janko Mrkvicka", GetCustomersColor(new DateTime(2017, 1, 18, 13, 30, 30))));
-            listBox1.Items.Add(new CustomerEntity("Janko Hrasko", GetCustomersColor(new DateTime(2016, 1, 18, 13, 30, 30))));
+            var store = NezarkaBookstoreWeb.ModelStore.LoadFrom(reader);
+            IList<NezarkaBookstoreWeb.Customer> customers = store.GetCustomers();
+            foreach (var customer in customers)
+            {
+                listBox1.Items.Add(new CustomerEntity(customer.FirstName +" "+ customer.LastName, GetCustomersColor(customer.DateJoined)));
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

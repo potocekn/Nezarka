@@ -16,7 +16,12 @@ namespace NezarkaBookstoreWeb {
 			return books;
 		}
 
-		public Book GetBook(int id) {
+        public IList<Customer> GetCustomers()
+        {
+            return customers;
+        }
+
+        public Book GetBook(int id) {
 			return books.Find(b => b.Id == id);
 		}
 
