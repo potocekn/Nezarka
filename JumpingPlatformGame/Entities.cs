@@ -86,4 +86,16 @@ namespace JumpingPlatformGame {
 		public override Color Color => Color.Pink;
 	}
 
+    class CustomerEntity : MovableEntity
+    {
+        string name;
+        Color color = Color.Gold;
+        public CustomerEntity(string name, Color color)
+        {
+            this.name = name;
+            this.color = color;
+        }
+
+        public override Color Color => this.color;
+    }
 }

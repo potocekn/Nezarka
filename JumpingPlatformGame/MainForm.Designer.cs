@@ -39,7 +39,7 @@
             // 
             this.worldPanel.BackColor = System.Drawing.Color.White;
             this.worldPanel.Location = new System.Drawing.Point(16, 50);
-            this.worldPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.worldPanel.Margin = new System.Windows.Forms.Padding(4);
             this.worldPanel.Name = "worldPanel";
             this.worldPanel.Size = new System.Drawing.Size(1133, 512);
             this.worldPanel.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.jumpingPanel.BackColor = System.Drawing.Color.Khaki;
             this.jumpingPanel.Location = new System.Drawing.Point(16, 570);
-            this.jumpingPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jumpingPanel.Margin = new System.Windows.Forms.Padding(4);
             this.jumpingPanel.Name = "jumpingPanel";
             this.jumpingPanel.Size = new System.Drawing.Size(1133, 118);
             this.jumpingPanel.TabIndex = 1;
@@ -56,7 +56,7 @@
             // joeButton
             // 
             this.joeButton.Location = new System.Drawing.Point(16, 15);
-            this.joeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.joeButton.Margin = new System.Windows.Forms.Padding(4);
             this.joeButton.Name = "joeButton";
             this.joeButton.Size = new System.Drawing.Size(100, 28);
             this.joeButton.TabIndex = 2;
@@ -67,7 +67,7 @@
             // janeButton
             // 
             this.janeButton.Location = new System.Drawing.Point(124, 15);
-            this.janeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.janeButton.Margin = new System.Windows.Forms.Padding(4);
             this.janeButton.Name = "janeButton";
             this.janeButton.Size = new System.Drawing.Size(100, 28);
             this.janeButton.TabIndex = 3;
@@ -78,7 +78,7 @@
             // jackButton
             // 
             this.jackButton.Location = new System.Drawing.Point(232, 15);
-            this.jackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jackButton.Margin = new System.Windows.Forms.Padding(4);
             this.jackButton.Name = "jackButton";
             this.jackButton.Size = new System.Drawing.Size(100, 28);
             this.jackButton.TabIndex = 4;
@@ -89,7 +89,7 @@
             // jillButton
             // 
             this.jillButton.Location = new System.Drawing.Point(340, 15);
-            this.jillButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jillButton.Margin = new System.Windows.Forms.Padding(4);
             this.jillButton.Name = "jillButton";
             this.jillButton.Size = new System.Drawing.Size(100, 28);
             this.jillButton.TabIndex = 5;
@@ -134,9 +134,10 @@
             this.Controls.Add(this.joeButton);
             this.Controls.Add(this.jumpingPanel);
             this.Controls.Add(this.worldPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Jumping Platform Game";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
 		}
