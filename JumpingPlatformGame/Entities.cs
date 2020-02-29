@@ -89,11 +89,22 @@ namespace JumpingPlatformGame {
     class CustomerEntity : MovableEntity
     {
         string name;
-        Color color = Color.Gold;
+        Color color;
         public CustomerEntity(string name, Color color)
         {
             this.name = name;
             this.color = color;
+        }
+
+        public CustomerEntity(string name)
+        {
+            this.name = name;
+            this.color = Color.Gold; //default value
+        }
+
+        public override string ToString()
+        {
+            return this.name;
         }
 
         public override Color Color => this.color;
