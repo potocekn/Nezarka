@@ -122,8 +122,8 @@ namespace JumpingPlatformGame
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //StreamReader reader = new StreamReader("NezarkaSummer.in");
-            //ModelStore store = new NezarkaBookstoreWeb.ModelStore();
+            StreamReader reader = new StreamReader("NezarkaSummer.in");
+            //var store = new NezarkaBookstoreWeb.ModelStore.LoadFrom(reader);
             listBox1.Items.Add(new CustomerEntity("Pavel Jezek", GetCustomersColor(null)));
             listBox1.Items.Add(new CustomerEntity("Filip Kliber", GetCustomersColor(new DateTime(2020, 1, 18, 13, 30, 30))));
             listBox1.Items.Add(new CustomerEntity("Jan Pacovsky", GetCustomersColor(new DateTime(2019, 1, 18, 13, 30, 30))));

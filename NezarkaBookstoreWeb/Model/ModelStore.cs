@@ -4,9 +4,11 @@ using System.Text;
 
 using System.IO;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("JumpingPlatformGame")]
+
 namespace NezarkaBookstoreWeb {
 
-	 class ModelStore {
+	class ModelStore {
 		private List<Book> books = new List<Book>();
 		private List<Customer> customers = new List<Customer>();
 
